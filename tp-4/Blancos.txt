@@ -1,0 +1,15 @@
+algoritmo: Blancos
+Entrada: cc: cadena de caracteres con MF'.'
+salida: espacios: entero(+)
+
+A0 - espacios <- 0
+A1 - LEER cc
+A2 - CONTAR ESPACIOS
+        MIENTRAS(cc <> MF)
+            SI(cc=' ')ENTONCES
+                espacios <- espacios + 1
+            FIN SI
+            LEER cc
+        FIN MIENTRAS
+A3 - ESCRIBIR espacios
+A4 - PARAR

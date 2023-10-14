@@ -1,0 +1,16 @@
+algoritmo: matriz
+entrada: n: entero(+).
+salida: num: entero(+).
+Var. Aux.: i,j: entero(+).
+
+A1: inicializacion
+    num <- 1
+A2: LEER n
+A3: IMPRIMIR MATRIZ 
+    HACER n VECES(1,..,n)
+        HACER n VECES(1,..,n)
+            ESCRIBIR num
+            num <- num + 1
+        FIN HACER
+    FIN HACER
+A4: PARAR
