@@ -1,0 +1,21 @@
+algoritmo: vocales abiertas
+entrada: cc: cadena de caracteres con MF '.'
+salida: cantA, cantB ,cantC:enteros(+)
+Var. Aux.: 
+
+A1 - INICIALIZACION
+        cantA <- 0
+        cantB <- 0
+        cantC <- 0
+A2 - LEER cc
+A3 - CONTAR VOCALES
+        MIENTRAS(cc != '.')
+            SEGUN(cc)
+                a: cantA <- cantA + 1 
+                e: cantB <- cantB + 1
+                o: cantC <- cantC + 1
+            FIN SEGUN
+            LEER cc
+        FIN MIENTRAS
+A4 - ESCRIBIR cantA, cantB, cantC
+A4 - PARAR

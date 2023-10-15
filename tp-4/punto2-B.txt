@@ -1,0 +1,27 @@
+algoritmo: vocales abiertas
+entrada: cc: cadena de caracteres con MF '.'
+salida: cantPalabras:enteros(+)
+Var. Aux.: pasaPalabra:enteros{0,1}
+
+A1 - INICIALIZACION
+        cantPalabras <- 0;
+        pasaPalabra <- 0
+A2 - LEER cc
+A3 - CONTAR VOCALES
+        MIENTRAS(cc != '.')
+            MIENTRAS(pasaPalabra == 0)
+                SEGUN(cc)
+                    a: 
+                    e: 
+                    o:  cantPalabras <- cantPalabras + 1
+                        pasaPalabra <- 1
+                FIN SEGUN
+            FIN MIENTRAS
+            LEER cc
+            SI( cc == ' ')
+                pasaPalabra <- 0
+            FIN SI
+            LEER cc          
+        FIN MIENTRAS
+A4 - ESCRIBIR cantA, cantB, cantC
+A4 - PARAR
