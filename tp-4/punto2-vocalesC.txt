@@ -1,0 +1,23 @@
+algoritmo: palabras con vocales abiertas
+entrada: cc: cadena de caracteres con MF '.'
+salida: cantPalabras: enteros(+)
+Var. Aux.:ant: cadena de caracteres
+
+A1 - INICIALIZACION
+        cantPalabras <- 0
+        ant:' '
+A2 - LEER cc
+A3 - CONTAR PALABRAS
+        MIENTRAS(cc <> '.')
+            SI(ant = ' ' && cc <> ' ')
+                SEGUN(cc)
+                    a:
+                    e:
+                    o: cantPalabras <- cantPalabras + 1 ;
+                FIN SEGUN
+                ant <- cc
+                LEER cc
+            FIN SI
+        FIN MIENTRAS
+A4 - ESCRIBIR cantPalabras
+A5 - PARAR
