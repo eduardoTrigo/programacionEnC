@@ -3,7 +3,7 @@
 int main()
 {
     char cc, ant = ' ';
-    int cantPalabras = 0;
+    int cantPalabras = 0, esPalabra;
     printf("ingrese una frase terminada en .\n");
     fflush(stdin);
     scanf("%c", &cc);
@@ -11,7 +11,7 @@ int main()
     {
         if (ant == ' ' && cc != ' ')
         {
-            int esPalabra = 0;
+            esPalabra = 0;
             while (esPalabra == 0)
             {
                 /* code */
@@ -25,17 +25,17 @@ int main()
                 case 'O':
                     cantPalabras = cantPalabras + 1;
                     esPalabra = 1;
-                    ant = cc;
-                    scanf("%c", &cc);
+
                     break;
                 default:
-                    ant = cc;
-                    scanf("%c", &cc);
+
                     break;
                 }
+                ant = cc;
+                scanf("%c", &cc);
             }
         }
-        if (cc != '.' && ant != '.')
+        if (cc != '.' )
         {
             ant = cc;
             scanf("%c", &cc);

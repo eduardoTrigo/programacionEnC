@@ -1,0 +1,32 @@
+algoritmo: contador de letras
+entrada: cc: cadena de caracteres con MF'.'
+salida: menor:entero (+)
+        mayor: entero(+)
+Var. Aux.:  ant: cadena de caracteres.
+            cont: entero(+)
+            esPalabra: entero{0,1}
+
+A1-INICIALIZACION
+    menor <- 0
+    mayor <- 0
+    ant <- ' '
+A2-LEER cc
+A3-ANALIZAR
+    MIENTRAS(cc <> MF)
+        SI(ant == ' '  &&  cc!=' ')ENTONCES
+            esPalabra = 0
+            MIENTRAS(esPalabra == 0)
+            cont += 1
+            ant <- cc
+            LEER cc
+                SI(cc == ' ' )ENTONCES
+                    esPalabra=1
+                FIN SI
+            FIN MIENTRAS
+        FIN SI
+        ant <- cc
+        LEER cc
+    FIN MIENTRAS
+A4-ESCRIBIR mayor
+            menor
+A5-PARAR
