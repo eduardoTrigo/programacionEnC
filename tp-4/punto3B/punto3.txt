@@ -1,0 +1,31 @@
+Algoritmo: contar letras.
+entreda: cc: cadena de caracteres con MF'.'
+salida: menor: entero(+)
+        mayor: entero(+)
+        var. aux.: cont: entero(+)
+
+A1 - INICIALIZACION
+    mayor <- 0
+    menor <- 0
+A2 - LEER cc
+A3 - CONTAR LETRAS
+    MIENTRAS(cc <> MF)
+        MIENTRAS(cc <> ' ' || cc <> '.')
+            cont <- cont + 1
+            LEER cc
+        FIN MIENTRAS
+            SI(menor == 0 || cont < menor)ENTONCES
+                menor <- cont
+            FIN SI
+
+            SI(mayor == 0 || cont > mayor)ENTONCES
+                mayor <- cont
+            FIN SI
+
+            SI(cc == ' ')ENTONCES
+                cont =0
+                LEER cc
+            FIN SI
+    FIN MIENTRAS
+A4 - ESCRIBIR (menor, mayor)
+A5 - PARAR
