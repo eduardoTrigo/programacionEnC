@@ -1,0 +1,42 @@
+algoritmo: expendedora
+entrada:    producto{1,2,3,4}: entero(+)
+            dinero: real
+salida: vuelto: real, 
+Var. Aux.:
+CONSTANTES : PRECIO_G:  350
+             PRECIO_A:  300
+             PRECIO_E:  600
+
+A0 - INICIALIZACION
+        Stk-gaceosa <- 4
+        Stk_Agua <- 10
+        Stk-energizante <- 3
+A1 - LEER producto , dinero
+A2 - PROCEZAR
+SI(producto > 0 && producto < 5 )ENTONCES
+        SEGUN(producto)
+            1:  SI(dinero >= 350 && stk_)ENTONCES
+                    vuelto <- dinero - PRECIO_G
+                    mensaje <- entregar gaceosa
+                SINO
+                    mensaje <- dinero insuficiente
+                    vuelto <- dinero
+                FIN SI
+            2:  SI(dinero >= 300 && Stk_Agua != 0)ENTONCES
+                    vuelto <- dinero - PRECIO_A
+                    mensaje <- entregar agua
+                SINO
+                    mensaje <- dinero insuficiente
+                    vuelto <- dinero
+                FIN SI
+            3:  SI(dinero >= 600)ENTONCES
+                    vuelto <- dinero - PRECIO_G
+                    mensaje <- entregar gaceosa
+                SINO
+                    mensaje <- dinero insuficiente
+                    vuelto <- dinero
+                FIN SI
+        FIN SEGUN
+SINO
+    mensaje <- producto inexistente
+FIN SI

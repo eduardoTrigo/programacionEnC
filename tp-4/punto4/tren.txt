@@ -1,0 +1,35 @@
+Algoritmo: tren
+entrada:    agua, carbon: real;
+            recorrido: entero(+)
+salida: mensaje : cadena de caracteres
+Var. Aux.: kilometros: enteros(+)
+CONSTANTES:     CONSUMO_AGUA : 0.33
+                CONSUMO_CARBON : 0.20
+
+A1 - INICIALIZACION 
+        kilometros <- 0
+A2 - LEER agua,carbon,recorrido
+A3 - CALCULAR
+        MIENTRAS(agua > CONSUMO_AGUA || carbon > CONSUMO_CARBON || recorrido > 0)
+            kilometros <- kilometros + 1
+            recorrido <- recorrido - 1
+            agua <- agua - CONSUMO_AGUA
+            carbon <- carbon - CONSUMO_CARBON
+            ESCRIBIR (kilometros,agua,carbon)
+            LEER (agua, carbon , recorrido)
+        FIN MIENTRAS
+        SI ( agua < CONSUMO_AGUA || carbon < CONSUMO_CARBON)
+            SI(agua < 0.33 || carbon < 0.2)
+                SI(agua < 0.33)
+                    mensaje <- "el tren no llego a destino , agua insuficiente"
+                    ESCRIBIR mensaje
+                SINO
+                    mensaje <- "el tren no llego a destino , carbon insuficiente"
+                    ESCRIBIR mensaje
+                FIN SI
+            SINO
+                mensaje <- "el tren llego a destino."
+                ESCRIBIR mensaje
+            FIN SI
+        FIN SI
+A4 - PARAR

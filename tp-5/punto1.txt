@@ -1,0 +1,25 @@
+algoritmo: invertir
+entrada: num: entero(+)
+salida: numInv: entero(+) 
+        impares:enteros(+)
+Var. Aux.:
+A0 - INICIALIZACION
+        impares <- 0
+A1 - LEER num
+A2 - PROCEZAR
+        invertir(num)   
+A3 - ESCRIBIR (numAux , impares)
+A4 - PARAR
+
+
+FUNCION invertir(num):entero(+) 
+    MIENTRAS(num <> 0)
+            numAux <- RESTO(num, 10)
+                SI(RESTO(numAux,2)==0)ENTONCES
+                    impares <- impares + 1
+                FIN SI
+            num <- DIV(num,10)
+            numInv <- numAux + numInv*10
+        FIN MIENTRAS
+        ESCRIBIR(numero invertido 'numInv', cantidad de impares 'impares')
+FIN FUNCION

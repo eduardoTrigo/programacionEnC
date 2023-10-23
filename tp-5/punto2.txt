@@ -1,0 +1,62 @@
+algoritmo:Frase Modificada
+entrada: cc:cadena de caracteres con MF '.'
+salida: modificada: cadena de caracteres 
+Var. Aux.:
+
+A0 - INICIALIZACION
+        anterior <- ' '
+A1 - LEER cc
+A2 - ANALIZAR
+        MIENTRAS(cc <> '.')
+            SI(esLetra(cc))ENTONCES
+                digitos <- digitos + 1
+                vocal <- vocal + esVocal(cc)
+                SEGUN(cc)
+                    "a":
+                    "A": cc <- '@'
+                    "o":
+                    "O": cc <- '#'
+                    SINO: cc <- cc
+                FIN SEGUN
+                SI(esAlpha(cc) && anterior!=' ')ENTONCES
+                    SI(esMinuscula(cc))ENTONCES
+                        cc <- convertirMayuscula(cc)
+                    SINO
+                        SI(esMayuscula)ENTONCES
+                            cc <- convertirMinuscula(cc)
+                        FIN SI
+                    FIN SI
+                FIN SI
+            SINO
+                SI(esNumero(cc))ENTONCES
+                    numeros <- numeros + 1
+                FIN SI
+            FIN SI
+            mostrarPrimerCaracter(cc)
+            anterior <- cc
+            LEER(cc)
+        FIN MIENTRAS
+A3 - ESCRIBIR(vocal, numeros)
+A4 - PARAR
+
+
+PROCEDIMIENTO mostrarPrimerCaracter(cc):cadena de caracteres
+    ESCRIBIR(cc)
+FIN PROCEDIMIENTO
+
+FUNCION esVocal(cc):cadena de caracteres -> entero
+    valor=0
+    SEGUN(cc)
+        a:
+        A:
+        e:
+        E:
+        i:
+        I:
+        o:
+        O:
+        u:
+        U: valor=1
+
+        retorna(valor)
+FIN FUNCION
