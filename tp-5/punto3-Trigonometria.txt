@@ -1,0 +1,42 @@
+Algoritmo: Trigonometria
+entrada: a, b, c:Real , opcion: entero{1, 2, 3, 4} 
+salida:
+Var. Aux.:
+
+A1 - LEER a, b, c,
+A2 - ANALIZAR
+        HACER
+            SI(esRectangulo == 0)ENTONCES
+                LEER opcion
+                angulo(a,b,c,opcion)
+            SINO    
+                ESCRIBIR(triangulo rectangulo)
+            FIN SI
+        MIENTRAS(opcion <4)
+        FIN MIENTRAS
+A3 - PARAR
+
+
+
+FUNCION esRectangulo(a,b,c):real -> entero
+    valor = 0
+    SI(raiz(a)==raiz(b)+raiz(c) || raiz(b)==raiz(a)+raiz(c) || raiz(c)==raiz(b)+raiz(a))ENTONCES
+        valor = 1
+    FIN SI
+    retorna(valor)
+FIN FUNCION
+
+PROCEDIMIENTO angulo(a,b,c,opcion):entero, entero, entero, real
+    SEGUN(opcion)
+        1:  radianes = acos((raiz(a)-raiz(b)-raiz(c))/(-2*b*c))
+            grados = radianes * 180 / PI
+            ESCRIBIR(Angulo A, radianes, grados)
+        2:  radianes = acos((raiz(b)-raiz(a)-raiz(c))/(-2*a*c))
+            grados = radianes * 180 / PI
+            ESCRIBIR(Angulo B, radianes, grados)
+        3:  radianes = acos((raiz(c)-raiz(a)-raiz(b))/(-2*a*b))
+            grados = radianes * 180 / PI
+            ESCRIBIR(Angulo C, radianes, grados)
+        SINO: ESCRIBIR(opcion no valida)
+    FIN SEGUN
+FIN PROCEDIMIENTO
