@@ -27,7 +27,6 @@ int main()
     }else{
         printf("triangulo rectangulo");
     }
-
     return 0;
 }
 

@@ -1,0 +1,29 @@
+algoritmo: Inscripciones 2024
+entrada: nivel: entero{1,2,3,4}, pagos:entero{1,2,3}, 
+salida: aPagar: Real;
+Var. Aux.: preValor:real; opcion:entero{1,2,3,4}
+
+A1 - INICIALIZACION
+        aPagar <- 0
+A2 - LEER nivel         
+A3 - CALCULAR 
+        SEGUN(nivel)
+            1: preValor <- 12800
+            2: preValor <- 15000
+            3: preValor <- 18500
+            4:  SEGUN(opcion)
+                    1: preValor <- 20000
+                    2: preValor <- 19500
+                    3: preValor <- 22000
+                    4: preValor <- 15000
+                FIN SEGUN
+            SINO: ESCRIBIR("nivel inexistente")
+        FIN SEGUN
+A4- FORMA DE PAGO
+        SEGUN(pagos)
+            1: aPagar <- preValor * 0.90
+            2: aPagar <- preValor * 1.15
+            3: aPagar <- preValor * 1.25
+            SINO: ESCRIBIR("ingrese una opcion valida")
+        FIN SEGUN 
+A5 - PARAR
