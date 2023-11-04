@@ -1,0 +1,38 @@
+algoritmo: contadorDeVocales
+entrtada: cadena: cadena de caracteres con MF '.'
+salida: cantVocales: enteros(+), porcentaje: Real
+Var.Aux.: ant: cadena de caracteres, aA, eE, iI, oO, uU:enteros{0,1}
+
+A0 - INICIALIZACION
+        Ant <- ' '
+        aA <- 0
+        eE <- 0
+        iI <- 0
+        oO <- 0
+        uU <- 0
+A1 - LEER cadena
+A2 - ANALIZAR 
+        MIENTRAS(cadena <> MF)
+            SI(Ant = ' ' && cadena <> ' ')ENTONCES
+                palabras <- palabras + 1
+            FIN SI
+            SEGUN(cadena)
+                a:
+                A:  SI(aA = 0)ENTONCES
+                        aA <- 1
+                e:
+                E:  SI(eE = 0)ENTONCES
+                        eE <- 1
+                i:
+                I:  SI(iI = 0)ENTONCES
+                        iI <- 1
+                o:
+                O:  SI(oO = 0)ENTONCES
+                        oO <- 1
+                    FIN SI
+                u:
+                U:  SI(uU = 0)ENTONCES
+                        uU <- 1
+            FIN SEGUN
+            LEER cadena
+        FIN MIENTRAS
