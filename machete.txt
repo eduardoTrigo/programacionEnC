@@ -1,0 +1,7 @@
+fflush(stdin)  /// limpia terminal
+ -------------------
+
+libreria stdlib.h
+          time.h
+
+srand(time(NULL));  ///evita que los numeros random se repitan
