@@ -2,6 +2,7 @@
 #include <string.h>
 #include <ctype.h>
 
+
 int main(){
     char nombre[20], apellido[20], apeNom[40];
     int tamanoApe, tamanoNomApe;
@@ -10,7 +11,7 @@ int main(){
     fgets(nombre, 20, stdin);
 
     printf("ingrese aellido:\n");
-    fgets(apellido, 20 , stdin);
+    fgets(apellido, 20, stdin);
 
     apellido[strcspn(apellido, "\n")] = '\0';
 

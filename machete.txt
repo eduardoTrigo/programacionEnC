@@ -5,3 +5,4 @@ libreria stdlib.h
           time.h
 
 srand(time(NULL));  ///evita que los numeros random se repitan
+password[strcspn(password, "\n")] = '\0'; // Eliminar el salto de línea al final
