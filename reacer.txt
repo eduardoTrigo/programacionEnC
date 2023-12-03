@@ -1,3 +1,5 @@
-----------tp-2---------
+----------tp-5---------
 punto 2- comparar contraseñas.
 
+-----------tp-6--------
+punto 5 - horcadito
