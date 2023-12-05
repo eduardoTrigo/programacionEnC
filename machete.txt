@@ -6,3 +6,5 @@ libreria stdlib.h
 
 srand(time(NULL));  ///evita que los numeros random se repitan
 password[strcspn(password, "\n")] = '\0'; // Eliminar el salto de línea al final
+
+arreglo[i] = rand()%(max - min) + min + 1 // biblioteca stdlib random
