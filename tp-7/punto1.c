@@ -44,12 +44,31 @@ int main()
     }
     // puntFrase -= longitud;
     printf("direccion de memoria de *puntFrase: %p\n", &puntFrase);
+    printf("direccion de memoria de *puntAux: %p\n", &puntAux);
     printf("Contenido de la cuarta celda (notación de subíndice): %c\n", frase[3]);
     printf("Contenido de la cuarta celda (notación de puntero con desplazamiento): %c\n", *(puntFrase + 3));
     printf("cantidad de letras:%d\n", *p_letras);
     printf("cantidad de vocales:%d\n", *p_vocales);
     printf("cantidad de minusculas:%d\n", *p_minusculas);
     printf("cantidad de Mayusculas:%d\n", *p_mayusculas);
+
+    printf("\n");
+    printf("NOTACION DE SUBINDICE DE PUNTERO:\n");
+    for (int i = 0; puntFrase[i] !='\0'; i++)
+    {
+        printf("componente [%d] : %c\n",i +1, puntFrase[i]);
+    }
+    
+    printf("\n");
+    printf("NOTACION DE PUNTERO:\n");
+    for (int i = 0; *puntFrase !='\0'; i++)
+    {
+        printf("componente [%d] : %c\n",i +1, *puntFrase);
+        *puntFrase++;
+    }
+    
+    printf("direccion de memoria de *puntFrase: %p\n", &puntFrase);
+    printf("direccion de memoria de *puntAux: %p\n", &puntAux);
     return 0;
 }
 
