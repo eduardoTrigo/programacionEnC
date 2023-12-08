@@ -1,5 +1,10 @@
 ----------tp-5---------
 punto 2- comparar contraseñas.
 
------------tp-6--------
+----------tp-6--------
 punto 5 - horcadito
+
+----------tp-7--------
+punto 3 - mezclar palabras
+
+----------tp-8--------
